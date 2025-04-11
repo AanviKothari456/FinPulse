@@ -1,0 +1,23 @@
+package com.finpulse.service;
+
+import com.finpulse.model.Sector;
+import com.finpulse.repository.SectorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class SectorService {
+
+    @Autowired
+    private SectorRepository sectorRepository;
+
+    public List<Sector> getAllSectors() {
+        return sectorRepository.findAll();
+    }
+
+    public Sector saveSector(Sector sector) {
+        return sectorRepository.save(sector);
+    }
+}
