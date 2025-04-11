@@ -22,6 +22,4 @@ public class Alert {
         this.message = message;
         this.timestamp = timestamp;
     }
-
-    // Getters and setters omitted for brevity
 }
